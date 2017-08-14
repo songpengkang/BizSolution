@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font: 14px 'MicrosoftYahei';
+}
+/*html,body{*/
+    /*height: 100%;*/
+/*}*/
+#mainPage{
+    position: relative;
+    top: 0;
+    height:100%;
+}
+#nav{
+    height: 960px;
+    padding-top: 30px;
+    background: url("../images/1.jpg") no-repeat center center/cover;
+}
+.fix{
+    height:600px;
+}
+#bgp1{
+    background: url("../images/2.jpg") no-repeat center center/cover fixed;
+}
+#bgp2{
+    background: url("../images/3.jpg") no-repeat center center/cover fixed;
+}
+#bgp3{
+    background: url("../images/4.jpg") no-repeat center center/cover fixed;
+}
+#bgp4{
+    background: url("../images/5.jpg") no-repeat center center/cover fixed;
+}
+.content{
+    height: 584px;
+}
+
+
+
+/*导航部分*/
+.navbar{
+    position: relative;
+    height: 80px;
+    padding:0 50px;
+    background-color: rgba(255,255,255,.6);
+}
+.navbar .logo{
+    height:65px;
+    float: left;
+    padding-top: 15px;
+}
+.navbar .daohang{
+    float: right;
+    list-style: none;
+    height: 100%;
+}
+.navbar .daohang li{
+    float: left;
+    height:100%;
+    line-height: 80px;
+    padding:0 12px;
+}
+.navbar .daohang li a{
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+}
+.navbar .daohang li a:hover{
+    color: rgb(1,168,193);
+}
+#nav .content{
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    margin-left: -700px;
+    width: 1400px;
+    height: 600px;
+}
+#nav .content h1{
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: rgb(1,168,193);
+}
+#nav .content h2{
+    margin-top: 80px;
+    margin-left: 145px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 40px;
+    color: rgb(1,168,193);
+}
