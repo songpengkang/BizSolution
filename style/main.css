@@ -5,27 +5,35 @@
     padding: 0;
     font: 14px 'MicrosoftYahei';
 }
-/*html,body{*/
-    /*height: 100%;*/
-/*}*/
+li{
+    list-style: none;
+}
+/*阿里图标*/
+@font-face {
+    font-family: 'iconfont';  /* project id 344599 */
+    src: url('//at.alicdn.com/t/font_344599_7t8rhd55ottsxlxr.eot');
+    src: url('//at.alicdn.com/t/font_344599_7t8rhd55ottsxlxr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_344599_7t8rhd55ottsxlxr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_344599_7t8rhd55ottsxlxr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_344599_7t8rhd55ottsxlxr.svg#iconfont') format('svg');
+}
 #mainPage{
-    position: relative;
-    top: 0;
+
     height:100%;
 }
 #nav{
+    position: relative;
+    top: 0;
     height: 960px;
-    padding-top: 30px;
-    background: url("../images/1.jpg") no-repeat center center/cover;
 }
 .fix{
-    height:600px;
+    height:432px;
 }
 #bgp1{
-    background: url("../images/2.jpg") no-repeat center center/cover fixed;
+    background: url("../images/bg2.jpg") no-repeat center center/cover fixed;
 }
 #bgp2{
-    background: url("../images/3.jpg") no-repeat center center/cover fixed;
+    background: url("../images/bg3.jpg") no-repeat center center/cover fixed;
 }
 #bgp3{
     background: url("../images/4.jpg") no-repeat center center/cover fixed;
@@ -33,28 +41,33 @@
 #bgp4{
     background: url("../images/5.jpg") no-repeat center center/cover fixed;
 }
-.content{
-    height: 584px;
+#mainPage .content{
+    height: 684px;
 }
+
 
 
 
 /*导航部分*/
 .navbar{
-    position: relative;
+    position: absolute;
+    top: 30px;
+    width:100%;
     height: 80px;
-    padding:0 50px;
     background-color: rgba(255,255,255,.6);
+    z-index: 10;
 }
 .navbar .logo{
     height:65px;
     float: left;
     padding-top: 15px;
+    padding-left: 50px;
 }
 .navbar .daohang{
     float: right;
     list-style: none;
     height: 100%;
+    padding-right: 50px;
 }
 .navbar .daohang li{
     float: left;
@@ -70,25 +83,99 @@
 .navbar .daohang li a:hover{
     color: rgb(1,168,193);
 }
-#nav .content{
+
+
+/*轮播图页面*/
+#nav .banner{
+    position: relative;
+    height:100%;
+}
+#nav .banner .pic{
     position: absolute;
-    top: 280px;
-    left: 50%;
-    margin-left: -700px;
-    width: 1400px;
-    height: 600px;
+    width: 12000px;
+    height: 100%;
+    margin-left: -1920px;
 }
-#nav .content h1{
-    font-size: 50px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    color: rgb(1,168,193);
+#nav .banner .pic li{
+    float: left;
+    width: 1920px;
+    height: 960px;
 }
-#nav .content h2{
-    margin-top: 80px;
-    margin-left: 145px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    font-size: 40px;
-    color: rgb(1,168,193);
+#nav .banner .pic li img{
+    width:100%;
+    height:100%;
+}
+#nav .banner .tab{
+    position: absolute;
+    left:50%;
+    bottom: 50px;
+    margin-left: -75px;
+    width: 150px;
+}
+#nav .banner .tab li{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+#nav .banner .btn{
+    position: absolute;
+    width: 60px;
+    height:100px;
+}
+
+
+/**内容区域*/
+.content{
+    padding:0 50px;
+}
+.content h1{
+    margin: 50px auto;
+    font-size: 30px;
+    text-align: center;
+}
+.content .text{
+    padding-top: 70px;
+    overflow: hidden;
+}
+.content .text .introduce{
+    float: left;
+    width: 600px;
+    padding-left: 100px;
+}
+.content .text .introduce h2{
+    font-size: 22px;
+    padding-bottom: 50px;
+}
+.content .text .introduce p{
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 50px;
+}
+.content .text .introduce button{
+    width:135px;
+    height: 45px;
+    background-color: rgb(1,168,193);
+    color: #ffffff;
+    border:none;
+    border-radius: 8px;
+}
+.content .text img{
+    float: right;
+    padding-right: 100px;
+}
+.content2 .text,.content3 .text,.content4 .text{
+    padding-top: 200px;
+}
+.content2 .text .introduce,.content4 .text .introduce{
+    float: right;
+    padding-left: 0;
+    padding-right: 100px;
+}
+.content2 .text img,.content4 .text img{
+    float: left;
+    padding-left: 100px;
+    padding-right: 0;
 }
