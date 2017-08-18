@@ -6,7 +6,7 @@
     font: 14px 'MicrosoftYahei';
 }
 html,body{
-    min-width: 1920px;
+    /*min-width: 1920px;*/
 }
 li{
     list-style: none;
@@ -21,7 +21,6 @@ li{
     url('//at.alicdn.com/t/font_344599_7t8rhd55ottsxlxr.svg#iconfont') format('svg');
 }
 #mainPage{
-
     height:100%;
 }
 #nav{
@@ -33,16 +32,16 @@ li{
 .fix{
     height:432px;
 }
-#bgp1{
+.bgp1{
     background: url("../images/bg2.jpg") no-repeat center center/cover fixed;
 }
-#bgp2{
+.bgp2{
     background: url("../images/bg3.jpg") no-repeat center center/cover fixed;
 }
-#bgp3{
+.bgp3{
     background: url("../images/4.jpg") no-repeat center center/cover fixed;
 }
-#bgp4{
+.bgp4{
     background: url("../images/5.jpg") no-repeat center center/cover fixed;
 }
 #mainPage .content{
@@ -58,7 +57,7 @@ li{
     top: 0;
     width:100%;
     height: 70px;
-    background-color: rgba(255,255,255,.9);
+    background-color: rgba(0,0,0,.5);
     z-index: 50;
 }
 .navbar .logo{
@@ -81,11 +80,8 @@ li{
 }
 .navbar .daohang li a{
     text-decoration: none;
-    color: #333333;
+    color: #d5d5d5;
     font-size: 16px;
-}
-.navbar .daohang li a:hover{
-    color: rgb(1,168,193);
 }
 
 
@@ -120,6 +116,7 @@ li{
     height: 100%;
     text-align: center;
     background-color: rgba(0,0,0,.3);
+    user-select:none;
 }
 #nav .banner .pic li div p{
     font-size: 40px;
@@ -147,6 +144,7 @@ li{
     bottom: 50px;
     margin-left: -75px;
     width: 150px;
+    z-index: 50;
 }
 #nav .banner .tab li{
     float: left;
@@ -171,6 +169,7 @@ li{
     text-align: center;
     background-color: rgba(0,0,0,.2);
     z-index: 50;
+    user-select: none;
 }
 #nav .banner .btn i{
     line-height: 100px;
@@ -241,4 +240,43 @@ li{
     float: left;
     padding-left: 100px;
     padding-right: 0;
+}
+
+/**********尾部***************************/
+.foot{
+    width:100%;
+    background-color: rgb(45,48,53);
+}
+.foot .box{
+    width: 1024px;
+    margin: 40px auto;
+    overflow: hidden;
+    padding:50px 0 0 0;
+}
+.foot .box dl{
+    float: left;
+    padding-right: 50px;
+}
+.foot .box dl a{
+    text-decoration: none;
+    color: #999999;
+    font-size: 14px;
+}
+.foot .box dl dt{
+    padding-bottom: 10px;
+}
+.foot .box dl dt a{
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.foot .box .pic{
+    float: right;
+}
+.foot p{
+    width:100%;
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+    padding-bottom: 20px;
 }
