@@ -17,7 +17,9 @@
 
     //初始化
     $tabLi.eq(0).addClass("on");
-
+    $pic.prepend($picLi.last().clone());
+    $pic.append($picLi.first().clone());
+    console.log($picLi.length);
     // 点击tab li 的时候
     $tabLi.click(function () {
         var x = $(this).index();
@@ -32,10 +34,8 @@
            var x = index;
            if($(this).index()){
                x++;
-               x%=$tabLi.length;
            }else {
                x--;
-               if(x<0) x = $tabLi.length - 1;
            }
            change(x);
            clickTime = new Date;
@@ -46,17 +46,25 @@
         timer1 = setInterval(function () {
             var x = index;
             x++;
-            x%=$tabLi.length;
             change(x);
         },3000);
         return auto;
     }
+    /*变化函数*/
     function change(i) {
-        $pic.stop().animate({
-            "marginLeft" : -$picLiWidth*(i+1)+"px"
-        },800);
-        $tabLi.eq(i).addClass("on").siblings().removeClass("on");
+        var moveIndex = i;
+        i%= $picLi.length;
+        if(i<0)i = $picLi.length - 1;
         index = i;
+        console.log(index);
+        $pic.stop().animate({
+            "marginLeft" : -$picLiWidth*(moveIndex+1)
+        },800,function () {
+            if (index === $picLi.length - 1||index === 0){
+                $(this).css("marginLeft",-$picLiWidth * (index + 1 ));
+            }
+        });
+        $tabLi.eq(index).addClass("on").siblings().removeClass("on");
     }
 })();
 
@@ -70,15 +78,15 @@
             $navbarUla= $(".navbar .daohang li a");
         if(docScrollTop < navHeight ){
             $navbar.css({
-                backgroundColor:"rgba(0,0,0,.5)",
-            })
+                backgroundColor:"rgba(0,0,0,.5)"
+            });
             $navbarUla.css({
                 color : "#d5d5d5"
             })
         }else {
             $navbar.css({
-                backgroundColor:"rgba(255,255,255,.8)",
-            })
+                backgroundColor:"rgba(255,255,255,.8)"
+            });
             $navbarUla.css({
                 color : "#333"
             })
